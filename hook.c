@@ -19,10 +19,10 @@ unsetenv("LD_PRELOAD");
 		setsid();
 		int pid2 = fork();
 		if (pid2 < 0) {
-			//padre
+			pwn();
 		}
 		else if (pid2 > 0 ) {
-			pwn();
+			//Padre
 		}
 		else {
 			close(0);
